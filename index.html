@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Adhd Maxxer </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <Link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="bgvideo">
+        <source src="website.mp4" type="video/mp4">
+    </video>
+    <div class="parent">
+        <h1 class="score-text"> score </h1>
+        <h3 id="score" class="score"> </h3>
+
+        <h2 id="h2" class="h2">
+            Welcome to Adhd Maxxer click to increse your dopamine
+        </h2>
+
+        <button id="btn" class="btn">
+            +dopamine
+        </button>
+
+    </div>
+    <div class="glass"> <!--the glass div starts-->
+
+        <p> ⚠ caution: side effects may include:
+            brainrot, maxxed dopamine, and loss of attention span
+        </p> <!-- warning-->
+
+        <p class="mission">
+            Reach 250 clicks to unlock 2x click (OP)
+        </p>
+
+        <button class="click-2x" id="multiplier">
+            buy 2x click?
+        </button>
+
+
+        <button class="skins" id="skins">
+            Skins
+        </button>
+
+        <!--skin div-->
+
+        <div class="skin-div" id="skindiv">
+            <img class="img"
+                src="
+https://i.ytimg.com/vi/sCSy7u5pSlI/hq720.jpg?sqp=-oaymwFBCNAFEJQDSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGBkgOyh_MA8=&rs=AOn4CLAb-kFPgkjcGw0IuadJ8QaSsrJsfg">
+        </div>
+
+        <div class="skin-div" id="skindiv">
+            <img class="img"
+                src=" https://i.ytimg.com/vi/6pJD0KaudVk/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB70Sa6Ixrcq3WuL2GGZ9cEKLf07w">
+        </div>
+
+    </div>
+    <script>
+        let btn = document.getElementById("btn")
+        let h2 = document.getElementById("h2")
+        let num = 0
+        let score = document.getElementById("score")
+        let multiplier = document.getElementById("multiplier")
+        let power = 1
+        let bought = false
+        let dream = document.getElementById("Competetive")
+        let speedrun = document.getElementById("speedrun")
+        let skindiv = document.getElementById("skindiv")
+        let skin = document.getElementById("skins")
+
+        btn.onclick = function () {
+            let r = Math.random() * 255
+            let g = Math.random() * 255
+            let b = Math.random() * 255
+            num = num + power
+            score.textContent = num
+            btn.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+            if (num >= 150 && bought == false) {
+                multiplier.style.display = "block"
+            } else {
+                multiplier.style.display = "none"
+            }
+
+        }
+
+        multiplier.onclick = function () {
+            bought == true
+            num = num - num
+            power = 2
+            score.textContent = num
+            multiplier.stlye.display = "none"
+        }
+
+
+        setInterval(function () {
+
+            let r = Math.floor(Math.random() * 255)
+            let g = Math.floor(Math.random() * 255)
+            let b = Math.floor(Math.random() * 255)
+
+            h2.style.color = `rgb(${r}, ${g}, ${b})`
+            setInterval(function () {
+
+                let r1 = Math.floor(Math.random() * 255)
+                let g1 = Math.floor(Math.random() * 255)
+                let b1 = Math.floor(Math.random() * 255)
+
+                h2.style.color = `rgb(${r1}, ${g1}, ${b1})`
+
+                let r2 = Math.floor(Math.random() * 255)
+                let g2 = Math.floor(Math.random() * 255)
+                let b2 = Math.floor(Math.random() * 255)
+
+                score.style.color = `rgb(${r2}, ${g2}, ${b2})`
+
+            }, 500)
+
+        }, 500)
+
+        skin.onclick = function () {
+
+            if (skindiv.style.display == "none") {
+
+                skindiv.style.display = "block"
+
+            } else {
+
+                skindiv.style.display = "none"
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
